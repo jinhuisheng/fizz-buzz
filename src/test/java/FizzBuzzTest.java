@@ -18,6 +18,12 @@ class FizzBuzzTest {
             "5,Buzz",
             "10,Buzz",
             "15,FizzBuzz",
+
+            "13,Fizz",
+            "52,Buzz",
+            "53,FizzBuzz",
+            "35,FizzBuzz",
+            "135,FizzBuzz",
     })
     void should_return_expected_when_input_number(Integer number, String expected) {
         assertThat(FizzBuzz.of(number)).isEqualTo(expected);

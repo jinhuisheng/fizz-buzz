@@ -15,16 +15,24 @@ public class FizzBuzz {
     }
 
     private String convert() {
-        if (isDividedBy(3) && isDividedBy(5)) {
+        if (isDividedOrContains(3) && isDividedOrContains(5)) {
             return "FizzBuzz";
         }
-        if (isDividedBy(3)) {
+        if (isDividedOrContains(3)) {
             return "Fizz";
         }
-        if (isDividedBy(5)) {
+        if (isDividedOrContains(5)) {
             return "Buzz";
         }
         return String.valueOf(this.number);
+    }
+
+    private boolean isDividedOrContains(int i) {
+        return isDividedBy(i) || contains(i);
+    }
+
+    private boolean contains(int i) {
+        return String.valueOf(this.number).contains(String.valueOf(i));
     }
 
     private boolean isDividedBy(int i) {

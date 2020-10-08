@@ -1,7 +1,5 @@
 package fizzbuzz;
 
-import static java.lang.String.*;
-
 /**
  * @author huisheng.jin
  * @date 2020/10/8.
@@ -9,14 +7,15 @@ import static java.lang.String.*;
 public class FizzBuzz {
     private static final int FIZZ_TAG = 3;
     private static final int BUZZ_TAG = 5;
-    private final int number;
+    private int number;
 
     private FizzBuzz(int number) {
         this.number = number;
     }
 
     public static String of(int number) {
-        return new FizzBuzz(number).value();
+        FizzBuzz fizzBuzz = new FizzBuzz(number);
+        return fizzBuzz.value();
     }
 
     private String value() {
@@ -29,18 +28,18 @@ public class FizzBuzz {
         if (isRelatedTo(BUZZ_TAG)) {
             return "Buzz";
         }
-        return valueOf(number);
+        return String.valueOf(number);
     }
 
-    private boolean isRelatedTo(int number) {
-        return dividedBy(number) || contains(number);
+    private boolean isRelatedTo(int i) {
+        return isDividedBy(i) || contains(i);
     }
 
-    private boolean contains(int containsNumber) {
-        return valueOf(this.number).contains(valueOf(containsNumber));
+    private boolean contains(int number) {
+        return String.valueOf(this.number).contains(String.valueOf(number));
     }
 
-    private boolean dividedBy(int dividedNumber) {
-        return this.number % dividedNumber == 0;
+    private boolean isDividedBy(int number) {
+        return this.number % number == 0;
     }
 }

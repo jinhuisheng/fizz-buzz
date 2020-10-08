@@ -22,13 +22,26 @@ public class FizzBuzzTest {
     }
 
     @Test
+    void should_return_Fizz_given_number_contains_3() {
+        assertThat(FizzBuzz.of(13)).isEqualTo("Fizz");
+        assertThat(FizzBuzz.of(23)).isEqualTo("Fizz");
+    }
+
+    @Test
     void should_return_Buzz_given_number_divided_by_5() {
         assertThat(FizzBuzz.of(5)).isEqualTo("Buzz");
         assertThat(FizzBuzz.of(10)).isEqualTo("Buzz");
     }
 
     @Test
+    void should_return_Buzz_given_number_contains_5() {
+        assertThat(FizzBuzz.of(52)).isEqualTo("Buzz");
+        assertThat(FizzBuzz.of(58)).isEqualTo("Buzz");
+    }
+
+    @Test
     void should_return_FizzBuzz_given_number_divided_by_3_and_divided_by_5() {
         assertThat(FizzBuzz.of(15)).isEqualTo("FizzBuzz");
+        assertThat(FizzBuzz.of(51)).isEqualTo("FizzBuzz");
     }
 }

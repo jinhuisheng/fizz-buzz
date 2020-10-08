@@ -2,6 +2,8 @@ package fizzbuzz;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * @author huisheng.jin
@@ -9,13 +11,11 @@ import java.util.List;
  */
 public class Game {
     private int size;
-    private List<String> fizzBuzzList = new ArrayList<>();
+    private List<String> fizzBuzzList;
 
     public Game(int size) {
         this.size = size;
-        for (int i = 1; i <= size; i++) {
-            fizzBuzzList.add(FizzBuzz.of(i));
-        }
+        this.fizzBuzzList = IntStream.range(1, size + 1).boxed().map(FizzBuzz::of).collect(Collectors.toList());
     }
 
     public Integer getSize() {

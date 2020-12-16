@@ -9,7 +9,7 @@ public class GameNumber {
 
     @Override
     public String toString() {
-        if (dividedBy3And5() || contains3And5()) {
+        if (isRelatedTo(3) && isRelatedTo(5)) {
             return "FizzBuzz";
         }
         if (isRelatedTo(3)) {

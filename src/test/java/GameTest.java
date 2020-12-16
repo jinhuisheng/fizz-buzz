@@ -9,5 +9,6 @@ public class GameTest {
         assertThat(game.size()).isEqualTo(100);
         assertThat(game.numberAt(0).toString()).isEqualTo("1");
         assertThat(game.numberAt(2).toString()).isEqualTo("Fizz");
+        assertThat(game.numberAt(4).toString()).isEqualTo("Buzz");
     }
 }

@@ -7,15 +7,19 @@ public class GameNumber {
 
     @Override
     public String toString() {
-        if (number % 3 == 0 && number % 5 == 0) {
+        if (dividedBy(3) && dividedBy(5)) {
             return "FizzBuzz";
         }
-        if (number % 3 == 0) {
+        if (dividedBy(3)) {
             return "Fizz";
         }
-        if (number % 5 == 0) {
+        if (dividedBy(5)) {
             return "Buzz";
         }
         return number.toString();
+    }
+
+    private boolean dividedBy(int divideNumber) {
+        return number % divideNumber == 0;
     }
 }

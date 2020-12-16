@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class GameNumberTest {
 
@@ -17,4 +16,10 @@ class GameNumberTest {
         assertThat(new GameNumber(6).toString()).isEqualTo("Fizz");
         assertThat(new GameNumber(18).toString()).isEqualTo("Fizz");
     }
+
+    @Test
+    void should_toString_Buzz_given_number_divided_by_5() {
+        assertThat(new GameNumber(5).toString()).isEqualTo("Buzz");
+    }
+
 }

@@ -8,6 +8,6 @@ public class GameTest {
         Game game = new Game(100);
         assertThat(game.size()).isEqualTo(100);
         assertThat(game.numberAt(0).toString()).isEqualTo("1");
-//        assertThat(game.numberAt(2).toString()).isEqualTo("Fizz");
+        assertThat(game.numberAt(2).toString()).isEqualTo("Fizz");
     }
 }

@@ -20,6 +20,7 @@ class GameNumberTest {
     @Test
     void should_toString_Fizz_given_number_contains_3() {
         assertThat(new GameNumber(13).toString()).isEqualTo("Fizz");
+        assertThat(new GameNumber(31).toString()).isEqualTo("Fizz");
     }
 
     @Test

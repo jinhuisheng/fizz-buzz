@@ -1,3 +1,4 @@
+import static java.lang.String.*;
 
 public class GameNumber {
     private Integer number;
@@ -21,7 +22,7 @@ public class GameNumber {
     }
 
     private boolean contains(int i) {
-        return String.valueOf(number).contains(String.valueOf(i));
+        return valueOf(number).contains(valueOf(i));
     }
 
     private boolean dividedBy(int divideNumber) {

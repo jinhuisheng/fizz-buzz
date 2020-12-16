@@ -12,13 +12,17 @@ public class GameNumber {
         if (dividedBy3And5() || contains3And5()) {
             return "FizzBuzz";
         }
-        if (dividedBy(3) || contains(3)) {
+        if (isRelatedTo(3)) {
             return "Fizz";
         }
-        if (dividedBy(5) || contains(5)) {
+        if (isRelatedTo(5)) {
             return "Buzz";
         }
         return number.toString();
+    }
+
+    private boolean isRelatedTo(int i) {
+        return dividedBy(i) || contains(i);
     }
 
     private boolean contains3And5() {

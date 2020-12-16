@@ -15,7 +15,7 @@ public class GameNumber {
         if (dividedBy(3) || contains(3)) {
             return "Fizz";
         }
-        if (dividedBy(5)) {
+        if (dividedBy(5) || contains(5)) {
             return "Buzz";
         }
         return number.toString();

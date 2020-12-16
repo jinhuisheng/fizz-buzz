@@ -1,4 +1,4 @@
-# fizz-buzz
+# fizz-buzz game
 
 ## 基本需求
 写一个程序打印1到100这些数字: 
@@ -10,3 +10,9 @@
 遇到包含3的数字打印“Fizz” 
 遇到包含5的数字打印“Buzz”
 如果既包含3，又包含5时，打印"FizzBuzz"
+
+## 需求分析
+
+Game 
+
+GameNumber

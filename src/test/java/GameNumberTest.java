@@ -12,7 +12,7 @@ class GameNumberTest {
     }
 
     @Test
-    void should_toString_Fizz_given_3() {
+    void should_toString_Fizz_given_number_divided_by_3() {
         assertThat(new GameNumber(3).toString()).isEqualTo("Fizz");
         assertThat(new GameNumber(6).toString()).isEqualTo("Fizz");
         assertThat(new GameNumber(18).toString()).isEqualTo("Fizz");

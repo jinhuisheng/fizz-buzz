@@ -18,10 +18,6 @@ public class Game {
         return size;
     }
 
-    public String get(int index) {
-        return null;
-    }
-
     public Object numberAt(int position) {
         return "1";
     }

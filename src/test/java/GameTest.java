@@ -10,5 +10,6 @@ public class GameTest {
         assertThat(game.numberAt(0).toString()).isEqualTo("1");
         assertThat(game.numberAt(2).toString()).isEqualTo("Fizz");
         assertThat(game.numberAt(4).toString()).isEqualTo("Buzz");
+        assertThat(game.numberAt(14).toString()).isEqualTo("FizzBuzz");
     }
 }

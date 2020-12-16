@@ -13,8 +13,7 @@ class GameNumberTest {
 
     @Test
     void should_toString_Fizz_given_3() {
-        GameNumber gameNumber = new GameNumber(3);
-        assertThat(gameNumber.toString()).isEqualTo("Fizz");
+        assertThat(new GameNumber(3).toString()).isEqualTo("Fizz");
+        assertThat(new GameNumber(6).toString()).isEqualTo("Fizz");
     }
-
 }

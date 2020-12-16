@@ -7,7 +7,7 @@ public class GameNumber {
 
     @Override
     public String toString() {
-        if (number == 3) {
+        if (number % 3 == 0) {
             return "Fizz";
         }
         return number.toString();

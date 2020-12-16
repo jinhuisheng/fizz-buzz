@@ -9,7 +9,7 @@ public class GameNumber {
 
     @Override
     public String toString() {
-        if (dividedBy(3) && dividedBy(5)) {
+        if (dividedBy3And5()) {
             return "FizzBuzz";
         }
         if (dividedBy(3) || contains(3)) {
@@ -19,6 +19,10 @@ public class GameNumber {
             return "Buzz";
         }
         return number.toString();
+    }
+
+    private boolean dividedBy3And5() {
+        return dividedBy(3) && dividedBy(5);
     }
 
     private boolean contains(int i) {

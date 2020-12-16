@@ -21,15 +21,15 @@ public class GameNumber {
         return number.toString();
     }
 
-    private boolean isRelatedTo(int i) {
-        return dividedBy(i) || contains(i);
+    private boolean isRelatedTo(int number) {
+        return dividedBy(number) || contains(number);
     }
 
-    private boolean contains(int i) {
-        return valueOf(number).contains(valueOf(i));
+    private boolean contains(int number) {
+        return valueOf(this.number).contains(valueOf(number));
     }
 
-    private boolean dividedBy(int divideNumber) {
-        return number % divideNumber == 0;
+    private boolean dividedBy(int number) {
+        return this.number % number == 0;
     }
 }

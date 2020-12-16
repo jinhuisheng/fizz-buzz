@@ -26,6 +26,7 @@ class GameNumberTest {
     @Test
     void should_toString_Buzz_given_number_divided_by_3_and_5() {
         assertThat(new GameNumber(15).toString()).isEqualTo("FizzBuzz");
+        assertThat(new GameNumber(45).toString()).isEqualTo("FizzBuzz");
     }
 
 

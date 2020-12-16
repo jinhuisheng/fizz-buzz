@@ -19,6 +19,6 @@ public class Game {
     }
 
     public Object numberAt(int position) {
-        return "1";
+        return numbers.get(position).toString();
     }
 }

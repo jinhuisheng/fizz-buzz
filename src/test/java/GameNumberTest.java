@@ -15,5 +15,6 @@ class GameNumberTest {
     void should_toString_Fizz_given_3() {
         assertThat(new GameNumber(3).toString()).isEqualTo("Fizz");
         assertThat(new GameNumber(6).toString()).isEqualTo("Fizz");
+        assertThat(new GameNumber(18).toString()).isEqualTo("Fizz");
     }
 }

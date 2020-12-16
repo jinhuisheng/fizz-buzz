@@ -25,14 +25,6 @@ public class GameNumber {
         return dividedBy(i) || contains(i);
     }
 
-    private boolean contains3And5() {
-        return contains(3) && contains(5);
-    }
-
-    private boolean dividedBy3And5() {
-        return dividedBy(3) && dividedBy(5);
-    }
-
     private boolean contains(int i) {
         return valueOf(number).contains(valueOf(i));
     }

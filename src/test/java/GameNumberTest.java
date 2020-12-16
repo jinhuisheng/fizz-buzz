@@ -20,6 +20,7 @@ class GameNumberTest {
     @Test
     void should_toString_Buzz_given_number_divided_by_5() {
         assertThat(new GameNumber(5).toString()).isEqualTo("Buzz");
+        assertThat(new GameNumber(10).toString()).isEqualTo("Buzz");
     }
 
 }

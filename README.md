@@ -13,7 +13,8 @@
 
 ## 需求分析
 
-Game 
+Game .getOutput 1-100 
+
 
 GameNumber
 

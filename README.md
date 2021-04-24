@@ -23,3 +23,40 @@
 即两个需求结合：
 
 如果是3的倍数或者包含3，又是5的倍数或者包含5时，打印"FizzBuzz"
+
+
+测试用例：
+
+```text
+
+基本需求：
+
+Input  1,2  =>  “1”,”2”
+
+input  3,9  =>   Fizz
+
+Input  5,10,20 => Buzz
+
+Input   15 =>  FizzBuzz
+
+
+扩展需求：
+
+input  13,31 => Fizz
+
+Input  52  => Buzz
+
+同时包含3，包含5 
+input  35 => FizzBuzz
+
+包含3 ，被5整除
+input  305  => FizzBuzz
+
+被3整除，包含5
+input   51  => FizzBuzz
+
+
+
+
+
+```

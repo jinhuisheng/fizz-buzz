@@ -1,6 +1,11 @@
+package fizzbuzz;
+
 import static java.lang.String.*;
 
 public class FizzBuzz {
+
+    public static final int BUZZ_NUMBER = 5;
+    public static final int FIZZ_NUMBER = 3;
     private final int number;
 
     public FizzBuzz(int number) {
@@ -8,22 +13,21 @@ public class FizzBuzz {
     }
 
     public static String of(int number) {
-        FizzBuzz fizzBuzz = new FizzBuzz(number);
-        return fizzBuzz.parse();
+        return new FizzBuzz(number).parse();
     }
 
     private String parse() {
         String result = "";
-        if (isDividedOrContains(3)) {
+        if (isDividedByOrContains(FIZZ_NUMBER)) {
             result += "Fizz";
         }
-        if (isDividedOrContains(5)) {
+        if (isDividedByOrContains(BUZZ_NUMBER)) {
             result += "Buzz";
         }
         return result.isEmpty() ? valueOf(number) : result;
     }
 
-    private boolean isDividedOrContains(int i) {
+    private boolean isDividedByOrContains(int i) {
         return dividedBy(i) || contains(i);
     }
 

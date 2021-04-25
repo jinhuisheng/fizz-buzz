@@ -1,8 +1,9 @@
+package fizzbuzz;
+
+import org.assertj.core.api.Java6Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Java6Assertions.assertThat;
-
-public class FizzBuzzTest {
+class FizzBuzzTest {
     @Test
     void should_return_itself() {
         assertResult(1, "1");
@@ -16,8 +17,8 @@ public class FizzBuzzTest {
 
     @Test
     void should_return_Fizz_given_number_contains_3() {
-        assertResult(13, "Fizz");
         assertResult(31, "Fizz");
+        assertResult(13, "Fizz");
     }
 
     @Test
@@ -34,14 +35,12 @@ public class FizzBuzzTest {
     @Test
     void should_return_FizzBuzz() {
         assertResult(15, "FizzBuzz");
-        assertResult(45, "FizzBuzz");
         assertResult(35, "FizzBuzz");
         assertResult(305, "FizzBuzz");
         assertResult(51, "FizzBuzz");
     }
 
     private void assertResult(int number, String expected) {
-        assertThat(FizzBuzz.of(number)).isEqualTo(expected);
+        Java6Assertions.assertThat(FizzBuzz.of(number)).isEqualTo(expected);
     }
-
 }

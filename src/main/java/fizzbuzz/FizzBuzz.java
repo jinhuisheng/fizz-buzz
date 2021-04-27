@@ -6,10 +6,10 @@ public class FizzBuzz {
 
     public static final int BUZZ_NUMBER = 5;
     public static final int FIZZ_NUMBER = 3;
-    private final int number;
+    private final int rawNumber;
 
-    public FizzBuzz(int number) {
-        this.number = number;
+    public FizzBuzz(int rawNumber) {
+        this.rawNumber = rawNumber;
     }
 
     public static String of(int number) {
@@ -18,24 +18,24 @@ public class FizzBuzz {
 
     private String parse() {
         String result = "";
-        if (isDividedByOrContains(FIZZ_NUMBER)) {
+        if (isRelatedTo(FIZZ_NUMBER)) {
             result += "Fizz";
         }
-        if (isDividedByOrContains(BUZZ_NUMBER)) {
+        if (isRelatedTo(BUZZ_NUMBER)) {
             result += "Buzz";
         }
-        return result.isEmpty() ? valueOf(number) : result;
+        return result.isEmpty() ? valueOf(rawNumber) : result;
     }
 
-    private boolean isDividedByOrContains(int i) {
-        return dividedBy(i) || contains(i);
+    private boolean isRelatedTo(int number) {
+        return dividedBy(number) || contains(number);
     }
 
-    private boolean dividedBy(int i) {
-        return number % i == 0;
+    private boolean contains(int number) {
+        return valueOf(rawNumber).contains(valueOf(number));
     }
 
-    private boolean contains(int i) {
-        return valueOf(number).contains(valueOf(i));
+    private boolean dividedBy(int number) {
+        return rawNumber % number == 0;
     }
 }
